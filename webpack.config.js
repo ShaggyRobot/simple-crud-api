@@ -1,14 +1,15 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
-const path = require('path');
+// import commonjsVariables from 'commonjs-variables-for-esmodules';
+const { resolve } = require('path');
 
 const isProduction = process.env.NODE_ENV == 'production';
+// const { __dirname, __filename } = commonjsVariables(import.meta);
 
 const config = {
   target: 'node',
-  entry: './src/index.js',
+  entry: './src/app.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [

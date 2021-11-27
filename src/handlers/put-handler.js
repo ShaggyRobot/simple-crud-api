@@ -1,7 +1,7 @@
-import { validate } from 'uuid';
-import bodyValidator from '../validators/body-validator.js';
+const { validate } = require('uuid');
+const bodyValidator = require('../validators/body-validator.js');
 
-export default (req, res) => {
+module.exports = (req, res) => {
   let body = [];
   req.on('data', (data) => {
     body.push(data);

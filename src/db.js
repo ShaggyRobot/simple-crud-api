@@ -1,4 +1,4 @@
-export default [];
+module.exports = [];
 
 // const defaultPerson = {
 //   id: 'Default ID',

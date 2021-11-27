@@ -1,7 +1,6 @@
-import { validate } from 'uuid';
-import bodyValidator from '../validators/body-validator.js';
+const { validate } = require('uuid');
 
-export default (req, res) => {
+module.exports = (req, res) => {
   req.on('data', () => {
     switch (true) {
       case !validate(req.id):

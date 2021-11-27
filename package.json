@@ -25,7 +25,6 @@
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch"
   },
-  "type": "module",
   "dependencies": {
     "commonjs-variables-for-esmodules": "^1.1.0",
     "dotenv": "^10.0.0",

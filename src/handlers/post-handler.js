@@ -1,8 +1,8 @@
-import { v4 as generateUuid } from 'uuid';
-import DB from '../db.js';
-import bodyValidator from '../validators/body-validator.js';
+const { v4: generateUuid } = require('uuid');
+const DB = require('../db.js');
+const bodyValidator = require('../validators/body-validator.js');
 
-export default (req, res) => {
+module.exports = (req, res) => {
   let body = [];
   let dbEntry = {};
   console.log(req.xURL);

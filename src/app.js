@@ -1,17 +1,15 @@
-import { v4 as uuid4, validate } from 'uuid';
-import path from 'path';
-import * as http from 'http';
-import dotenv from 'dotenv';
-import commonjsVariables from 'commonjs-variables-for-esmodules';
-// import url from 'url';
-import DB from './db.js';
-import getHandler from './handlers/get-handler.js';
-import postHandler from './handlers/post-handler.js';
-import putHandler from './handlers/put-handler.js';
-import deleteHandler from './handlers/delete-handler.js';
-import validateRoute from './validators/route-validator.js';
+const path = require('path');
+const http = require('http');
+const dotenv = require('dotenv');
+// import commonjsVariables from 'commonjs-variables-for-esmodules';
+const DB = require('./db.js');
+const getHandler = require('./handlers/get-handler.js');
+const postHandler = require('./handlers/post-handler.js');
+const putHandler = require('./handlers/put-handler.js');
+const deleteHandler = require('./handlers/delete-handler.js');
+const validateRoute = require('./validators/route-validator.js');
 
-const { __dirname, __filename } = commonjsVariables(import.meta);
+// const { __dirname, __filename } = commonjsVariables(import.meta);
 
 dotenv.config();
 
@@ -57,6 +55,3 @@ server.listen(process.env.PORT, (e) => {
         `\x1Bc${path.resolve(__dirname, __filename)}\nlistening @ port:${process.env.PORT}`
       );
 });
-
-// const id = uuid4();
-// console.log(validate(id));

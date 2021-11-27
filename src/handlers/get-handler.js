@@ -1,6 +1,6 @@
-import { validate } from 'uuid';
+const { validate } = require('uuid');
 
-export default (req, res) => {
+module.exports = (req, res) => {
   switch (true) {
     case !req.id:
       res.writeHead(200, { 'Content-Type': 'application/json' });

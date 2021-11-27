@@ -1,6 +1,4 @@
-import { validate } from 'uuid';
-
-export default (req) => {
+module.exports = (req) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   req.xURL = url;
   const routes = url.pathname.split('/').splice(1);

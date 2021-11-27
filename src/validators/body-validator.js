@@ -1,12 +1,10 @@
-import { validate } from 'uuid';
-
 const validFields = {
   name: (name) => typeof name === 'string',
   age: (age) => typeof age === 'number',
   hobbies: (hobbies) => Array.isArray(hobbies)
 };
 
-export default (body) => {
+module.exports = (body) => {
   let msg = '';
   try {
     const bodyJSON = JSON.parse(body);
