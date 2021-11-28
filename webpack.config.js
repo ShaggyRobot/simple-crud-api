@@ -2,7 +2,7 @@
 // import commonjsVariables from 'commonjs-variables-for-esmodules';
 const { resolve } = require('path');
 
-const isProduction = process.env.NODE_ENV == 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 // const { __dirname, __filename } = commonjsVariables(import.meta);
 
 const config = {
