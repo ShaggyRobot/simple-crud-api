@@ -5,7 +5,7 @@ const bodyValidator = require('../validators/body-validator.js');
 module.exports = (req, res) => {
   let body = [];
   let dbEntry = {};
-  console.log(req.xURL);
+  // console.log(req.xURL);
   req.on('data', (data) => {
     body.push(data);
   });

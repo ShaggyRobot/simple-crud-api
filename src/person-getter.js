@@ -6,7 +6,7 @@ function getter(req, res) {
     res.end('Beep-beep!');
     process.stdout.write('Beep.\n');
     req.on('data', (data) => {
-      console.log(JSON.parse(data));
+      // console.log(JSON.parse(data));
       if (JSON.parse(data).close === true) {
         this.close();
         process.exit(42);

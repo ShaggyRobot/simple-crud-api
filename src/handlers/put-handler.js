@@ -26,7 +26,7 @@ module.exports = (req, res) => {
       default:
         req.DB.map((item, i) => {
           if (item.id === req.id) {
-            console.log(':::', item);
+            // console.log(':::', item);
             req.DB[i] = { id: req.id, ...JSON.parse(body) };
             // req.DB[i].id = req.id;
           }

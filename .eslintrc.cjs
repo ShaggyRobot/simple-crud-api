@@ -8,6 +8,7 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module'
   },
+  ignorePatterns: ['*.test.js'],
   rules: {
     'comma-dangle': 'off',
     'arrow-body-style': 'off',

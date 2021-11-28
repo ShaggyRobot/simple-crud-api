@@ -52,6 +52,8 @@ server.listen(process.env.PORT, (e) => {
   e
     ? console.error(e.message)
     : console.log(
-        `\x1Bc${path.resolve(__dirname, __filename)}\nlistening @ port:${process.env.PORT}`
+        `${path.resolve(__dirname, __filename)}\nlistening @ port:${process.env.PORT}`
       );
 });
+
+module.exports = { server };

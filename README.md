@@ -29,3 +29,5 @@ You can work with API by sending requests to /person endpoint (http://localhost:
  - POST /person creates new person and stores it in database.
  - PUT /person/${personId} updates record about person with corresponding ID.
  - DELETE /person/${personId} is used to delete record about existing person from database
+
+ To run tests, run "npm test"
